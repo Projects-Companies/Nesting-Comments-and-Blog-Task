@@ -33,8 +33,10 @@ const Comment = ({
   return (
     <div key={comment.id} className="comment">
 
+    <div className="comment-box">
+    
       <div className="comment-image-container">
-        <img src="/user-icon.png" />
+        <img src="/user-icon.png" alt="Logo unloaded" />
       </div>
 
       <div className="comment-right-part">
@@ -57,6 +59,7 @@ const Comment = ({
           />
 
         )}
+        </div>
         
         <div className="comment-actions">
           {canReply && (

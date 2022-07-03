@@ -1,15 +1,16 @@
 import React from "react";
-import List from "./Listcode";
-import Data from "./BloglistApi";
-import { Link } from "react-router-dom";
+import {Listcode3} from "./Listcode";
 
-const Bloglist = () => {
+import { Link } from "react-router-dom";
+import Data3 from './BloglistApi3';
+
+const Bloglist2 = () => {
   return (
     <div className="bloglist">
-      {Data.map((data) => {
+      {Data3.map((data) => {
         return (
           <div key={data.id}>
-            <List
+            <Listcode3
               name={data.name}
               para={data.para}
               date={data.date}
@@ -22,9 +23,9 @@ const Bloglist = () => {
       <nav aria-label="...">
         <ul className="pagination">
           
-          <li className="page-item active">
+          <li className="page-item">
             <Link className="page-link" to="/">
-              1
+              Previous
             </Link>
           </li>
           <li className="page-item" aria-current="page">
@@ -32,16 +33,15 @@ const Bloglist = () => {
               2
             </Link>
           </li>
-          <li className="page-item">
+          <li className="page-item active">
             <Link className="page-link" to="/bloglist-3">
-              Next
+              3
             </Link>
           </li>
-         
         </ul>
       </nav>
     </div>
   );
 };
 
-export default Bloglist;
+export default Bloglist2;

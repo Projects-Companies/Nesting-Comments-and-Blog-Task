@@ -1,12 +1,10 @@
 import React from 'react'
-import './Blogview.css';
+import Blog1 from '../RenderPage/Blog1';
 
 const Blogview = () => {
   return (
     <div className='main'>
-        <div className='content'>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde blanditiis dolor incidunt harum labore consequuntur nisi velit laboriosam officiis perferendis.
-        </div>
+        <Blog1 />
     </div>
   )
 }

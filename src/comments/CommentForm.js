@@ -14,26 +14,37 @@ const CommentForm = ({
     handleSubmit(text);
     setText("");
   };
+
   return (
-    <form onSubmit={onSubmit}>
-      <textarea
-        className="comment-form-textarea"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <button className="comment-form-button" disabled={isTextareaDisabled}>
-        {submitLabel}
-      </button>
-      {hasCancelButton && (
-        <button
-          type="button"
-          className="comment-form-button comment-form-cancel-button"
-          onClick={handleCancel}
-        >
-          Cancel
+    <div className="comment-form-div">
+      <form onSubmit={onSubmit}>
+
+        <input className="comment-form-textarea-1" type="text" placeholder="Name" value={text}  onChange={(e) => setText(e.target.value)} />
+
+        <textarea
+          className="comment-form-textarea"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder="Comment"
+        />
+
+        <div className="Buttons-of-comment">
+        <button className="comment-form-button" disabled={isTextareaDisabled}>
+          {submitLabel}
         </button>
-      )}
-    </form>
+
+        {hasCancelButton && (
+          <button
+            type="button"
+            className="comment-form-button comment-form-cancel-button"
+            onClick={handleCancel}
+          >
+            Cancel
+          </button>
+        )}
+        </div>
+      </form>
+    </div>
   );
 };
 
